@@ -1,5 +1,15 @@
 # @tanstack/start-plugin-core
 
+## 1.171.6
+
+### Patch Changes
+
+- Fix serialization adapter module resolution in TanStack Start. Vite dev now uses clean runtime-specific virtual module IDs instead of browser requests containing encoded null-byte virtual IDs, which avoids reverse proxy failures. When no serialization adapters are configured, Vite and Rsbuild now resolve `#tanstack-start-plugin-adapters` through the package empty-adapter fallback. ([#7484](https://github.com/TanStack/router/pull/7484))
+
+- Updated dependencies [[`a82cec6`](https://github.com/TanStack/router/commit/a82cec69474c366b36efdb3f43c4efe8311c485a)]:
+  - @tanstack/start-client-core@1.170.4
+  - @tanstack/start-server-core@1.169.4
+
 ## 1.171.5
 
 ### Patch Changes
